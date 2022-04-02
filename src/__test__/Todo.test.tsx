@@ -17,7 +17,7 @@ describe("Todoコンポーネントテスト", () => {
   });
 
   // ボタン押下時に追加関数が実行されること
-  test("ボタン押下時に関数実行", () => {
+  test("ボタン押下時に追加関数実行", () => {
     const clickFn = jest.fn();
     render(<Button onClick={clickFn}>決定箱のデータ取得</Button>);
     const button = screen.getByText("決定箱のデータ取得");
@@ -26,7 +26,7 @@ describe("Todoコンポーネントテスト", () => {
   });
 
   // ボタン押下時に決定箱のデータ取得関数が実行されること
-  test("ボタン押下時に関数実行", () => {
+  test("ボタン押下時に決定箱のデータ取得関数実行", () => {
     const clickFn = jest.fn();
     render(<Button onClick={clickFn}>決定箱のデータ取得</Button>);
     const button = screen.getByText("決定箱のデータ取得");
@@ -35,7 +35,7 @@ describe("Todoコンポーネントテスト", () => {
   });
 
   // ボタン押下時に戻る関数が実行されること
-  test("ボタン押下時に関数実行", async () => {
+  test("ボタン押下時に戻る関数実行", async () => {
     const clickFn = jest.fn();
     render(<Button onClick={clickFn}>戻る</Button>);
     const button = screen.getByText("戻る");
