@@ -38,14 +38,22 @@ export const DragDrop = () => {
                     <Draggable key={id} draggableId={id} index={index}>
                       {(provided) => (
                         <SLi
+                          data-testid={index}
                           ref={provided.innerRef}
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
                         >
-                          <div className="characters-thumb">
-                            <img src={thumb} alt={`${name} Thumb`} />
+                          <div
+                            key={id}
+                            className="container-list"
+                            role="listItem"
+                            aria-label={`${name}`}
+                          >
+                            <div className="characters-thumb">
+                              <img src={thumb} alt={`${name} Thumb`} />
+                            </div>
+                            <p>{name}</p>
                           </div>
-                          <p>{name}</p>
                         </SLi>
                       )}
                     </Draggable>

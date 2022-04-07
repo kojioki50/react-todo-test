@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.0",
@@ -20,6 +19,8 @@
     "react-beautiful-dnd": "^13.1.0",
     "react-beautiful-dnd-test-utils": "^4.1.1",
     "react-day-picker": "^7.4.10",
+    "react-dnd": "^16.0.0",
+    "react-dnd-html5-backend": "^16.0.0",
     "react-dom": "^17.0.2",
     "react-hot-toast": "^2.2.0",
     "react-router-dom": "^6.2.1",
@@ -54,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^12.1.4",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "eslint": "^7.32.0",
@@ -63,6 +65,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.28.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "react-dnd-test-backend": "^15.1.2"
   }
 }
