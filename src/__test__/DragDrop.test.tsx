@@ -19,14 +19,24 @@ describe("dnd test", () => {
         <DragDrop />
       </BrowserRouter>
     );
-    const lists = screen.getAllByRole("listItem");
-    const penne1 = lists.indexOf(lists[0]);
-    const pennePosition = lists.indexOf(lists[3]);
+    // const lists = screen.getAllByRole("listItem");
+    // const penne1 = lists.indexOf(lists[0]);
+    // const pennePosition = lists.indexOf(lists[3]);
+    // const [reorderedItem] = lists.splice(penne1, 1);
+    // screen.debug([reorderedItem]);
+    // lists.splice(pennePosition, 0, reorderedItem);
+    // expect(lists[0].textContent).toEqual("ペンネ２");
+    // expect(lists[3].textContent).toEqual("ペンネ１");
 
-    const [reorderedItem] = lists.splice(penne1, 1);
-    screen.debug([reorderedItem]);
-    lists.splice(pennePosition, 0, reorderedItem);
-    expect(lists[0].textContent).toEqual("ペンネ２");
+    const lists = screen.getAllByRole("listItem");
+    const penne1 = lists[0];
+    const pennePosition = lists[3];
+    fireEvent.dragStart(penne1);
+    fireEvent.dragEnter(pennePosition);
+    fireEvent.dragOver(pennePosition);
+    fireEvent.drop(pennePosition);
     expect(lists[3].textContent).toEqual("ペンネ１");
   });
+
+  
 });
